@@ -1,0 +1,283 @@
+As the Human-Computer Interfaces (HCI) come of age, the need for a more ergonomic and natural interface than the current one (keyboard, mouse, etc.) is being constantly felt. Talking of natural interfaces, what comes to mind, is sound (speech) and sight (vision). These form the basis of many intelligent systems research like robotics. Moreover, speech can also serve as an excellent interface for sightless people, or people with motor neuron disorders. In this dissertation we attempt at developing a TTS system. A lot of commercial systems are available for many foreign languages (mostly English), but there is yet to be a competitive system available for Indian languages.
+Although the task of building very high quality, unlimited vocabulary text-to-speech (TTS) system is still a difficult one, with many open research questions, we believe the building of reasonable quality voices for many tasks can serve our needs. We hope to easily extend the system to other languages, since there are a lot of underlying similarities between Indian languages. Indian languages being highly phonetic, result in simple letter-to-sound rules. We used 1 the standard concatenative synthesis.
+
+ The main problem faced by us was to make the synthesized speech sound natural. We investigated the reasons for the mechanical sounding speech and developed different synthesis models to overcome some of those problems. Moreover, we implemented some standard and also novel intonation and duration modification algorithms, which can be incorporated into the TTS at a later stage. Our main achievement was reasonably legible speech with an unlimited vocabulary. The following project presents a brief overview of the main text-to-speech synthesis problem and its sub-problems, and the initial work done in building a good TTS system with the use of google’s speech engine in python.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+
+
+Chapt. No.	Chapter	Page No.
+
+1	Introduction to text to speech	
+
+2	SRS Documentations	
+
+3
+	DFD, UML Diagrams	
+
+4	Methodology of the project	
+
+5	Screenshot of the project	
+
+6	Challenges in the project	
+
+7	Conclusion and Future scope	
+8	References	
+
+
+
+Chapter 1	    Introduction to text to speech
+
+Text-to-Speech (TTS) is the ability of a computer to produce spoken words by converting text to voice. In other words Text-to-Speech software is a speech synthesizer that vocalizes text in real time in a natural way. Text-to-speech synthesis -TTS - is the automatic conversion of a text into speech that resembles, as closely as possible, a native speaker of the language reading that text. Text-to-speech synthesizer (TTS) is the technology which lets computer speak to you. The TTS system gets the text as the input and then a computer algorithm which called TTS engine analyses the text, pre-processes the text and synthesizes the speech with some mathematical models. The TTS engine usually generates sound data in an audio format as the output.
+Text-to-Speech technology can be used in various areas:-
+
+Telecommunications: Text to speech can be implemented in IVR systems to create an efficient self-service solution that improves customer satisfaction by informing and guiding callers while reducing costs. TTS can also be used in automated outbound call systems in order to provide information to customers without the need of an agent.
+
+Mobile: From navigators to mobile phones and from e-readers to tablets Text-to-Speech technology is used to vocalize contents in order to provide an easier and more natural interaction. It is also used in mobile applications for various development platforms.
+
+Education: Text-to-Speech technology can be used in language teaching applications to vocalize any word in order to improve the pronunciation capabilities of the users.
+
+Accessibility: Text to speech technology can read text out loud and enables the use of computers and mobile devices for the disabled and for people with special needs. For example menus of ATMs are vocalized with Text to Speech technology in order to provide enhanced customer experience especially for the disabled. Web site and newspaper vocalization can also be listed among accessibility-related use of TTS.
+
+The text-to-speech (TTS) synthesis procedure consists of two main phases. The first is text analysis, where the input text is transcribed into a phonetic or some other linguistic representation, and the second one is the generation of speech waveforms, where the output is produced from this phonetic and prosodic information. These two phases are usually called high and low-level synthesis.
+The speech engine that I used in this final project is Google Text-to-speech module (gTTS) module, That can be installed in the python idle. To install the text to speech module firstly, we have to type some commands in the command prompt in order to install the python package in the python library. The command used to install the TTS module is:                   “pip install gTTS”
+The pyttsx3 module supports native Windows and Mac speech API’s but also supports espeak, making it the best available text-to-speech package. If you are interested specifically and only in speak, you might be interested in my Python text-to-speech with espeak.
+
+
+
+
+
+
+
+The main purpose of the project:
+
+The system is helpful for persons having learning disabilities or visually challenged.
+Prevents eye from strain, and user can sit and listen comfortably.
+Saves time especially while driving, exercising.
+Easy to use.
+Help improving spelling, reading, writing skills.
+People with different learning styles – Some people are auditory learners, some are visual learners, and some are kinesthetic learners – most learn best through a combination of the three. Universal Design for Learning is a plan for teaching which, through the use of technology and adaptable lesson plans, aims to help the maximum number of learners comprehend and retain information by appealing to all learning styles.
+  Extend the reach of your content – TTS gives access to your content to a greater population, such as those with literacy difficulties, learning disabilities, reduced vision and those learning a language. It also opens doors to anyone else looking for easier ways to access digital content.
+ Accessibility is relevant – Did you know that 15-20 percent of the worldwide population has some form of language-based learning disability? Did you know that 14 percent of adults in the US are illiterate and many have only basic reading skills? Making your online content audible helps the online population to better understand the text. The text is read and highlighted simultaneously so that the reader may easily follow along.
+ 
+
+
+
+Chapter 2	 System Requirement Specification
+1.Introduction:
+1.1. Purpose
+The project is about the development of the Speech Synthesis System that could be used input text to analyze, synthesize and generate the output in the form of the audible sound.
+Speech technology primarily comprises of two speech engines called as Speech Synthesis and Speech Recognition. Speech recognition is the mechanisms by which human speech is translated into text that an application would understand, whereas speech synthesis is the process of translating text into human understandable speech. It is also known as Text-to-Speech (TTS) conversion. The system model only uses the speech synthesis engine to convert text into speech. Hence, speech recognition engine is not an issue.
+During speech synthesis, first analysis of the text takes place that comprises of several steps like prosody analysis, structure analysis and text-to-phoneme conversion. In prosody analysis, speech attributes like the pitch, pausing, timing, peaking rate and others are concerned. After completion of these analysis the text’s prosody and structural information is gathered for conversion of it into phonetic or any linguistic description. Further, the prosody and phonetic information are used for the generation of speech waveforms using any of the two ways. One is to use words of pre-recorded human speech and concatenate them for full speech generation and other is to use signal processing techniques that are based on the mechanisms the phonemes sound and how they are affected by the prosody. 
+The main objectives of this system are:
+
+1. To resolve inability of people who are illiterate to understand what the bunch of characters in front of them mean.
+2.  To provide ease of use for disable persons with visual impairments.
+3.   To implement the system that can generate the audio output from the input English Text.
+
+1.2.  Scope
+The scope of the project is to implement a Text to speech converter system using python  idle and also help those visually impaired person to help them. And also it is more convenient as it can also work as a narrator means you can rest your precious eyes and just hear the whole story in whatever speed you want. 
+The study is focused on an ideal combination of a human-like behaviour with computer application to build a one-way interactive medium between the computer and the user. This application was customized using only one (1) word sentence consisting of the numeric digit 0 to 9 that could be used in operating a voice operated telephone system. Human speech is inherently a multi modal process that involves the analysis of the uttered acoustic signal and includes higher level knowledge sources such as grammar semantics and pragmatics. This project intends to focus only on the acoustic signal processing without the incorporation of a visual input. 
+Speech technology primarily comprises of two speech engines called as Speech Synthesis and Speech Recognition. Speech recognition is the mechanisms by which human speech is translated into text that an application would understand, whereas speech synthesis is the process of translating text into human understandable speech. This application is for the visually impaired people to access their emails through internet. The aim of the project is to develop a system model called TTS that converts the English text to Speech. The development of a complete TTS system requires a lot of research work and the development efforts. The major constraints for us during the development of this project were the time span in which we had to develop it and the resource persons for the research. Therefore we limited our scope so that we could build at least a working system by meeting our time obligation. The list given below describes the scope and major limitations of the project:
+         The most common phonological rules will be considered initially and the remaining will be considered at later state.
+         It is very difficult to incorporate a lot of vocabularies in this system as the system becomes slow as the vocabulary in the database increases.
+         This system is not for deaf people as they can’t hear.
+         The semantic and the grammatical analysis of the text will be postponed for the later stages.
+         Only single syllable word input will be synthesized after the completion of the first pass.
+         Only the basic vowels and the fundamental consonants are considered in this project.
+
+1.3. Glossary
+
+Term	Definition
+IDLE	Integrated development & learning environment
+TTS	Text-to-speech
+gTTS	Google’s Text-to-speech
+SRS	Software Requirements Specification
+
+
+1.4. Reference
+Based on the IEEE format.
+Chandigarh university(CSE department)
+
+2.0. Project perspective
+
+From customer point of view this is a software which is very easy to use and at the same time, it helps the challenged person and mute person to express themselves
+The software is standalone.
+The user interface of the text to speech is simple as we use in python idle, as the GUI based output is not used in the software.
+
+2.1. General description
+Speech is a primary mode of communication between humans. Speech technology is not new, so it is difficult to specify any particular event as its origin. In 1940s, Electronics Research Laboratory of Massachusetts Institute of Technology (MIT) and Bell Telephone Laboratories conducted research in the latter was one of the first multilingual language-independent systems, making extensive use of natural language processing methods. 
+Early electronic speech-synthesizers sounded robotic and were often barely intelligible. The quality of synthesized speech has steadily improved, but as of 2016 output from contemporary speech synthesis systems remains clearly distinguishable from actual human speech. 
+Kurzweil predicted in 2005 that as the cost-performance ratio caused speech synthesizers to become cheaper and more accessible, more people would benefit from the use of text-to-speech programs.
+auditory physiology, vocal apparatus physiology and its physical acoustics, and the psychophysics of acoustics perception, which resulted in development of coherent picture of speech communication.
+Speech applications are primarily to simplify and automate tasks for humans to make it easier and assisting them in resolving certain problem domains .Military are also using speech technology in Air Operations Center for generating air tasking orders and commanding unmanned aerial vehicle rather than conventional manual command input (Williamson and et. al., 2005).). Similarly, it is also being used by television companies like that of United Kingdom for live television subtitling that allows international and hearing impaired viewers with more access to live television (Lambourne and et. al., 2004).Like above illustrated speech-based applications, the system model being developed in this project is also intended to make human life easier and to address certain problem domain.
+Text-To-Speech (TTS) synthesis system has a wide range of applications in everyday life. In order to make the computer systems more interactive and helpful to the users, especially physically and visibly impaired and illiterate masses, the TTS synthesis systems are in great demand for the English languages.
+
+
+
+
+
+
+Chapter 4	 Methodology of the project and System Analysis:
+
+The character image is converted into text and then text into speech. The algorithm is followed. 
+Firstly check the condition that if google gTTs is available in the computer or not. If it is not available then error will be generated and gTTs library should be loaded in the computer.
+Gets the voice object from Google's gTTs. 
+Compares the input string with gTTs string. 
+Extracts voice by firstly select the voice which are available in library.
+Choose the pace of voice.
+Initializes the wave player for convert the text into speech. 
+Finally get the speech for given text.
+Text to speech conversion for the e-text input that directly typed in computer is also executed by the above steps
+
+
+Firstly, to make this project work (we) the team have to go through some websites to collect some information about the text to speech conversion using python in the python Idle. Then we have to install a text to speech package in python Idle, and to do that we have to go to command prompt and then type “pip install gTTs” to install the python package of google text to speech in python Idle and to support the text to speech. There are many text to speech voices other than google that you can use but, in this particular project I prefer the google text to speech. And then I have written a code in python to check whether the google text to speech is working fine or not, and when I executed the it runs smoothly and in that program whatever I wrote the text-to-speech program spell those statements very easily. And the current status of my project is up-to this. 
+A speech synthesis system is by definition a system, which produces synthetic speech. It is implicitly clear, that this involves some sort of input. What is not clear is the type of this input. If the input is plain text, which does not contain additional phonetic and/or phonological information the system may be called a text-to-speech (TTS) system. A schematic of the text-to-speech process is shown in the figure 1 below. As shown, the synthesis starts from text input.
+ 
+
+Total numbers of modules/phases in the project:
+There are mainly three modules in this particular project namely:
+Text Analysis:
+Text analysis includes such things as dividing the text into words and sentences, assigning syntactic categories to words, grouping the words within a sentence into phrases, identifying and expanding abbreviations, recognizing and analyzing expressions such as dates, fractions, and amounts of money, and so on.Word pronunciation is the problem of translating orthographic words -- words in ordinary spelling --into phonological words -- words whose sound is expressed in a sort of rationalized spelling, using an alphabet that corresponds to the set of broad phonetic1segments found in the pronunciation guide of a dictionary.The result of text analysis and word pronunciation is an explicit representation of the linguistic structure of the message encoded in the original text. The phonetic interpretation phase of a TTS system assigns quantitative phonetic values to the various aspects of this linguistic representation: duration of phonetic segments, F0 target values for pitch accents, and so forth. The signal generation phase of a TTS system then uses this detailed phonetic specification to produce time functions of the control parameters for an acoustic or articulatory speech synthesis model [examples, references], which are then used to calculate the samples of the speech waveform.
+Linguistic analysis:
+Text linguistics is a branch of linguistics that deals with texts as communication systems. ... In general it is an application of discourse analysis at the much broader level of text, rather than just a sentence or word.the scientific study of language. grammar - the branch of linguistics that deals with syntax and morphology (and sometimes also deals with semantics) phonemics, phonology - the study of the sound system of a given language and the analysis and classification of its phonemes.
+Waveform generation or speech generation:
+The state-of-the-art in text-to-speech synthesis has recently improved considerably due to novel neural waveform generation methods, such as WaveNet. However, these methods suffer from their slow sequential inference process, while their parallel versions are difficult to train and even more expensive computationally. Meanwhile, generative adversarial networks (GANs) have achieved impressive results in image generation and are making their way into audio applications; parallel inference is among their lucrative properties. By adopting recent advances in GAN training techniques, this investigation studies waveform generation for TTS in two domains (speech signal and glottal excitation). Listening test results show that while direct waveform generation with GAN is still far behind Wave Net, a GAN-based glottal excitation model can achieve quality and voice similarity on par with a WaveNet vocoder.
+
+
+Analysis of speech signals
+Continuous speech is a set of complicated audio signals which makes producing them artificially difficult. Speech signals are usually considered as voiced or unvoiced, but in some cases they are something between these two. Voiced sounds consist of fundamental frequency (F0) and its harmonic components produced by vocal cords (vocal folds). The vocal tract modifies this excitation signal causing formant (pole) and sometimes anti-formant (zero) frequencies (Abedjieva et al., 1993). Each formant frequency has also amplitude and bandwidth and it may be sometimes difficult to define some of these parameters correctly. The fundamental frequency and formant frequencies are probably the most important concepts in speech synthesis and also in speech processing. With purely unvoiced sounds, there is no fundamental frequency in excitation signal and therefore no harmonic structure either and the excitation can be considered as white noise. The airflow is forced through a vocal tract constriction which can occur in several places between glottis and mouth. Some sounds are produced with complete stoppage of airflow followed by a sudden release, producing an impulsive turbulent excitation often followed by a more protracted turbulent excitation (Allen et al., 1987). Unvoiced sounds are also usually more silent and less steady than voiced ones.
+
+Due studies revealed the following inadequacies with already existing systems:
+1.Structure analysis: punctuation and formatting do not indicate where paragraphs and other structures start and end. For example, the final period in “P.D.P.” might be misinterpreted as the end of a sentence.
+2.Text pre-processing: The system only produces the text that is fed into it without any pre-processing operation occurring. 
+3.Text-to-phoneme conversion: existing synthesizer system can pronounce tens of thousands or even hundreds of thousands of words correctly if the word(s) is/are not found in the data dictionary. 
+
+Expectation of new system:
+
+It is expected that the new system will reduce and improve on the problems encountered in the old system. The system is expected to among other things do the following:
+1.The new system has a reasoning process.
+2.The new system can do text structuring and annotation. 
+3.The new system’s speech rate can be adjusted.
+4. The Pitch of the voice can be adjusted.
+5. You can select between different voices and can even combine or juxtapose them if you want to create a dialogue between them.
+6. It has a user friendly interface so that people with less computer knowledge can easily use it.
+7. It must be compatible with all the vocal engines
+8. It complies with SSML specification.  
+
+
+
+
+Chapter 5	 Screenshots
+
+
+Firstly, if you want the program to run then you have to install the python package named gTTs or espesk or pysstx which is the name of various text to speech package available for the python Idle to install. To install these packages you have to goto command prompt and type the command     “pip install gTTS” 
+To install the ggogle’s Text to speech module, and implement in the program that you want to build. 
+
+
+
+
+
+
+
+Code : The following screenshot is the screenshot of the python text to speech in python IDLE, the code runs smoothly and the output screenshot of the program is ahead.
+
+
+
+
+Output:
+
+
+
+The following above screenshot shows us the input that is fed by the user to the program to convert it into speech by the use of google’s text-to-speech library in python package.
+
+
+
+
+
+And finally the output file is created in the name of ‘bob’ file which contains the speech that the user wants to hear from the program, and have entered the text accordingly to that.
+
+
+
+Chapter 6  Challenges in the project
+
+Text normalization challenges
+The process of normalizing text is rarely straightforward. Texts are full of heteronyms, numbers, and abbreviations that all require expansion into a phonetic representation. There are many spellings in English which are pronounced differently based on context. For example, "My latest project is to learn how to better project my voice" contains two pronunciations of "project". 
+Most text-to-speech (TTS) systems do not generate semantic representations of their input texts, as processes for doing so are unreliable, poorly understood, and computationally ineffective. As a result, various heuristic techniques are used to guess the proper way to disambiguate homographs, like examining neighboring words and using statistics about frequency of occurrence. 
+Recently TTS systems have begun to use HMMs (discussed above) to generate "parts of speech" to aid in disambiguating homographs. This technique is quite successful for many cases such as whether "read" should be pronounced as "red" implying past tense, or as "reed" implying present tense. Typical error rates when using HMMs in this fashion are usually below five percent. These techniques also work well for most European languages, although access to required training corpora is frequently difficult in these languages. 
+Deciding how to convert numbers is another problem that TTS systems have to address. It is a simple programming challenge to convert a number into words (at least in English), like "1325" becoming "one thousand three hundred twenty-five." However, numbers occur in many different contexts; "1325" may also be read as "one three two five", "thirteen twenty-five" or "thirteen hundred and twenty five". A TTS system can often infer how to expand a number based on surrounding words, numbers, and punctuation, and sometimes the system provides a way to specify the context if it is ambiguous.
+Roman numerals can also be read differently depending on context. For example, "Henry VIII" reads as "Henry the Eighth", while "Chapter VIII" reads as "Chapter Eight". 
+
+
+Text-to-phoneme challenges
+Speech synthesis systems use two basic approaches to determine the pronunciation of a word based on its spelling, a process which is often called text-to-phoneme or grapheme-to-phoneme conversion (phoneme is the term used by linguists to describe distinctive sounds in a language). The simplest approach to text-to-phoneme conversion is the dictionary-based approach, where a large dictionary containing all the words of a language and their correct pronunciations is stored by the program. Determining the correct pronunciation of each word is a matter of looking up each word in the dictionary and replacing the spelling with the pronunciation specified in the dictionary. The other approach is rule-based, in which pronunciation rules are applied to words to determine their pronunciations based on their spellings. This is similar to the "sounding out", or synthetic phonics, approach to learning reading. 
+Each approach has advantages and drawbacks. The dictionary-based approach is quick and accurate, but completely fails if it is given a word which is not in its dictionary. As dictionary size grows, so too does the memory space requirements of the synthesis system. On the other hand, the rule-based approach works on any input, but the complexity of the rules grows substantially as the system takes into account irregular spellings or pronunciations. (Consider that the word "of" is very common in English, yet is the only word in which the letter "f" is pronounced.) As a result, nearly all speech synthesis systems use a combination of these approaches. 
+Languages with a phonemic orthography have a very regular writing system, and the prediction of the pronunciation of words based on their spellings is quite successful. Speech synthesis systems for such languages often use the rule-based method extensively, resorting to dictionaries only for those few words, like foreign names and borrowings, whose pronunciations are not obvious from their spellings. On the other hand, speech synthesis systems for languages like English, which have extremely irregular spelling systems, are more likely to rely on dictionaries, and to use rule-based methods only for unusual words, or words that aren't in their dictionaries. 
+Evaluation challenges
+The consistent evaluation of speech synthesis systems may be difficult because of a lack of universally agreed objective evaluation criteria. Different organizations often use different speech data. The quality of speech synthesis systems also depends on the quality of the production technique (which may involve analogue or digital recording) and on the facilities used to replay the speech. Evaluating speech synthesis systems has therefore often been compromised by differences between production techniques and replay facilities.
+
+Chapter 7  Conclusion and future Scope:
+Speech synthesis has been developed steadily over the last decades and it has been incorporated into several new applications. For most applications, the intelligibility and comprehensibility of synthetic speech have reached the acceptable level. However, in prosodic, text preprocessing, and pronunciation fields there is still much work and improvements to be done to achieve more natural sounding speech.
+ Natural speech has so many dynamic changes that perfect naturalness may be impossible to achieve. However, since the markets of speech synthesis related applications are increasing steadily, the interest for giving more efforts and funds into this research area is also increasing. Present speech synthesis systems are so complicated that one researcher can not handle the entire system. With good modularity it is possible to divide the system into several individual modules whose developing process can be done separately if the communication between the modules is made carefully.
+The most commonly used techniques in present systems are based on formant and concatenative synthesis. The latter one is becoming more and more popular since the methods to minimize the problems with the discontinuity effects in concatenation points are becoming more effective. The concatenative method provides more natural and individual sounding speech, but the quality with some consonants may vary considerably and the controlling of pitch and duration may be in some cases difficult, especially with longer units. However, with for example diphone methods, such as PSOLA may be used. Some other efforts for controlling of pitch and duration have been made by for example Galanes et al. (1995). They proposed an interpolation/decimation method for resampling the speech signals. With concatenation methods the collecting and labeling of speech samples have usually been difficult and very time-consuming. Currently most of this work can be done automatically by using for example speech-recognition.
+With formant synthesis the quality of synthetic speech is more constant, but the speech sounds slightly more unnatural and individual sounding speech is more difficult to achieve. Formant synthesis is also more flexible and allows a good control of fundamental frequency. The third basic method, the articulatory synthesis, is perhaps the most feasible in theory especially for stop consonants because it models the human articulation system directly. On the one hand, the articulatory based methods are usually rather complex and the computational load is high, so the potential has not been realized yet. On the other hand, computational capabilities are increasing rapidly and the analysis methods of speech production are developing fast, so the method may be useful in the future.
+Several normal speech processing techniques may be used also with synthesized speech. For example, adding some reverberation it may be possible to increase the pleasantness of synthetic speech afterwards. Other effects, such as digital filtering, chorus, etc., can be also be used to generate different voices. However, using these kind of methods may increase the computational load. Most information of the speech signal is focused at the frequency range less than 10 kHz. However, using higher sample rate than necessary, the speech may sound slightly more pleasant.
+Some other techniques have been applied to speech synthesis, such as Artificial Neural Networks and Hidden Markov Models. These methods have been found promising for controlling the synthesizer parameters, such as gain, duration, and fundamental frequency.
+As mentioned earlier, the high-level synthesis is perhaps the least developed part of present synthesizers and needs special attention in the future. Especially controlling prosodic features has been found very difficult and the synthesized speech still sounds usually synthetic or monotonic. The methods for correct pronunciation have been developed steadily during last decades and the present systems are quite good, but improvements with especially proper names are needed. Text preprocessing with numbers and some context-dependent abbreviations is still very problematic. However, the development of semantic parsing or text understanding techniques may provide a major improvement in high-level speech synthesis. 
+As long as speech synthesis needs to be developed, the evaluation and assessment play one of the most important roles. Different levels of testing and the most common test methods have been discussed in the previous chapter. Before performing a listening test, the method used should be tested with smaller listener group to find out possible problems and the subjects should be chosen carefully. It is also impossible to say which test method provides the valid data and it is perhaps reasonable to use more than one test.
+It is quite clear that there is still very long way to go before text-to-speech synthesis, especially high-level synthesis, is fully acceptable. However, the development is going forward steadily and in the long run the technology seems to make progress faster than we can imagine. Thus, when developing a speech synthesis system, we may use almost all resources available, because in few years todays high resources are available in every personal computer. Regardless how fast the development process will be, speech synthesis, whenever used in low-cost calculators or state-of-the-art multimedia solutions, has probably the most promising future. If speech recognition systems someday achieve a generally acceptable level, we may develop for example a communication system where the system may first analyze the speakers' voice and its characteristics, transmit only the character string with some control symbols, and finally synthesize the speech with individual sounding voice at the other end. Even interpretation from a language to another may became feasible. However, it is obvious that we must wait for several years, maybe decades, until such systems are possible and commonly available.
+
+Speech is a primary mode of communication between humans. Speech technology is not new, so it is difficult to specify any particular event as its origin. A TTS system has text fed as input to generate synthetic speech waveforms as the output for the corresponding text through audio device to create sound as shown in above figure.
+After the text is fed to the TTS system the text pre-processing that is the input text is syllabalized according to algorithm that is implemented (which is described in later topic) and after that the sound is extracted from the database to produce the sound of the words that is syllabalized and for other processing in the sound of the input text the prosody techniques such as pitch, timing, peaking rates etc are used to produce the synthesized speech which more natural to the human speech.
+
+Speech applications are primarily to simplify and automate tasks for humans to make it easier and assisting them in resolving certain problem domains .Military are also using speech technology in Air Operations Center for generating air tasking orders and commanding unmanned aerial vehicle rather than conventional manual command input (Williamson and et. al., 2005).).
+
+ Similarly, it is also being used by television companies like that of United Kingdom for live television subtitling that allows international and hearing impaired viewers with more access to live television (Lambourne and et. al., 2004).Like above illustrated speech-based applications, the system model being developed in this project is also intended to make human life easier and to address certain problem domain.
+Text-To-Speech (TTS) synthesis system has a wide range of applications in everyday life.
+
+
+
+
+
+
+
+
+
+Some of the main Future Scope for this Product:
+
+1.1TTS will dominate audio applications that disseminate information:
+TTS is revolutionary specifically because it can turn text into voice-over audio somewhat instantly. For any digital applications, this means that user interfaces that were formerly limited to text interactions can now support audio interactions by coupling TTS with voice recognition.
+Provide great help for the low vision (old) people.
+1.2 Accessibility
+There are already several software suites designed to convert on-screen messages to voice audio. Currently Windows support this technology, to make their operating systems accessible to the blind. But TTS is also a boon to documentation accessibility. Think of long health care plans, instruction manuals, user agreements, or even warranties. TTS allows companies, or even users themselves, to quickly convert all of this content to accurate voiceover audio
+1.3 e-Learning and skills training applications
+Captivate already provides TTS voices for its software in English and a couple other languages. Microsoft already uses TTS voices for its how-to video tutorials – you can see one of the Spanish-language videos here, which has a blurb in which Microsoft explains that it switched to TTS because it allows them to offer their localized videos more quickly. More and more e-Learning developers are turning to TTS voices for their content, especially as a more user-friendly, but equally-low-cost alternative to subtitles.
+1.4 Improvement of pronunciations:
+
+The improvements in TTS quality over the last decade have been extraordinary – but you can expect the upgrades to continue. TTS voices are in development around the world, and TTS languages are being added every month. Expect the next generation to sound fuller, have more seamless vocal transitions, and to interpret content better. And of course, expect more languages. Because of this, we expect that TTS VO will be common-place, and possibly even dominant, as the source of voiceover in e-Learning and corporate multimedia localization  before the decade is out.
